@@ -5,7 +5,7 @@ require 'rhythmruby/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "rhythmruby"
-  gem.version       = rhythmruby::VERSION
+  gem.version       = Rhythmruby::VERSION
   gem.authors       = ["Luuk van der Velden"]
   gem.email         = ["l.j.j.vandervelden@gmail.com"]
   gem.description   = %q{create midi rhythm files, using a binary symbol String abstraction as the interface}
