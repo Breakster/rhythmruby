@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'RhythmRuby/version'
+require 'rhythmruby/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "RhythmRuby"
-  gem.version       = RhythmRuby::VERSION
+  gem.name          = "rhythmruby"
+  gem.version       = rhythmruby::VERSION
   gem.authors       = ["Luuk van der Velden"]
   gem.email         = ["l.j.j.vandervelden@gmail.com"]
   gem.description   = %q{create midi rhythm files, using a binary symbol String abstraction as the interface}

@@ -2,10 +2,10 @@
 versionInfo = RUBY_VERSION.split('.').map{|num| num.to_i}
 
 if versionInfo[1]==9
-  require "RhythmRuby"
+  require "rhythmruby"
 elsif versionInfo[1]<=8
   require "rubygems"
-  require "RhythmRuby"
+  require "rhythmruby"
 end
 
 fileName = 'drumtest.midi'
