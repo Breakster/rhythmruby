@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["l.j.j.vandervelden@gmail.com"]
   gem.description   = %q{create midi rhythm files, using a binary symbol String abstraction as the interface}
   gem.summary       = %q{allows manipulation, parsing and writing to midi of binary rhythm strings, this rhythm abstraction was build on top of the midilib gem by Jim Menard, thanks Jim!}
-  gem.homepage      = "https://github.com/Lvelden/rhythmruby/wiki"
+  gem.homepage      = "https://github.com/Lvelden/rhythmruby"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
