@@ -1,9 +1,10 @@
 RhythmRuby: Midi rhythms through String manipulation 
 ====================================================
 
-**Author**:         Luuk van der Velden, (Amsterdam, 2013)                                                                         
-**Website**:       http://rubygems.org/gems/rhythmruby                                                                                                               
+**Author**:         Luuk van der Velden, (Amsterdam, 2013)                                                                           
+**Website**:       http://rubygems.org/gems/rhythmruby                                                                               
 **Git**:            https://github.com/Lvelden/rhythmruby.git                                                                        
+**Dependency**:    midilib by Jim Menard                                                                                            
 
 Synopsis
 --------
