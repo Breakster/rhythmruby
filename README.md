@@ -31,8 +31,8 @@ Examples and Docs
 check out the examples provided and the documentation based on YARD. The examples are aimed at 
 creating single and multi instrument rhythms.
 
-in the next minimal example we have skipped the creation of the rhythm string.
-we write a predefined rhythm to midi
+In the next minimal example we have skipped the creation of the rhythm string.
+A predefined rhythm is written to midi.
 
 **a minimal example**
 
@@ -69,7 +69,7 @@ written to a midi file, possibly consisting of several tracks (f.i. hihat, snare
 With RhythmRuby you can capture polyrhythmics at their essence by compiling rhythms out of
 rhythm snippets and write them to midi drum tracks for further use in DAW's such as (cubase, logic, etc.)
 
-I made it to create drum rhythms for my band Hologram Earth (www.hologramearth.nl)
+RhythmRuby was made to create drum rhythms for my band Hologram Earth (www.hologramearth.nl)
 
 Acknowledgment
 --------------
