@@ -15,15 +15,23 @@ Basics
 
 **1.  rhythm string** is a string consisting of two symbols,
 one for silence (default '-') and one for an event or hit (default '#'). An example:
-'#---#---', you can read this string as one (drum) hit every three silences. 
+'#---#---#---#---', you can read this string as one (drum) hit every three silences. 
 
-**2. countBase** is the rhythmical length that is assigned to one symbol in a string.
-it is measured in quartenote lengths (relative to bpm). So countBase: 1.0 means one quarternote
-, which means every symbol is interpreted as a quarter note. 
-
-**3.** a rhythm string is made up out of **rhythm snippets** (or short strings). With the
+**2. rhythm snippets** (short strings) are the building blocks of a rhythm string. With the
 StringCompiler Class these snippets can be created and compiled into a rhythm string.
 These snippets capture the repetitive aspects of most rhythms.
+
+**3. countBase** is the rhythmical length that is assigned to one symbol in a string.
+it is measured in quartenote lengths (relative to bpm). So countBase: 1.0, means one quarternote per symbol. 
+
+Usage
+-----
+check out the examples provided in the gem and the documentation based on YARD.
+The RhythmCompiler Class generates rhythm snippets and combines these into rhythm strings.
+These can be parsed to MIDI ready data by the RhythmParser Class.
+The parsed output can be written to a MIDI file by the MidiWriter class instance. 
+
+**installation:** gem install rhythmruby
 
 Rational
 --------
