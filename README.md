@@ -44,7 +44,7 @@ intro rhythm of 'Perpetual Black Second' by Meshuggah (Nothing, 2002).
 
 **minimal example**
 
-uIn the example below we have skipped the creation of the rhythm string. 
+In the example below we have skipped the creation of the rhythm string. 
 A predefined rhythm is written to midi.
 
     require 'rhythmruby'
