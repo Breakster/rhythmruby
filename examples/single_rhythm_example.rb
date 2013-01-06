@@ -11,7 +11,7 @@ end
 fileName = 'test.midi'
 bpm = 140 # beats per minute of midi Song
 midiNote = 46 # midiNote of events, we are testing with one instrument, so one note
-countBase = 1.0/4.0 # countbase in multiples/divisions of the quarternote (1/4 countbase is sixteenth notes, 4 notes per quarter note)
+countBase = 1.0/4.0 # countbase in multiples/divisions of the quarter note (1/4 countbase is sixteenth notes, 4 notes per quarter note)
 
 # note 36=kick, 38=snare 46=hi-hat
 

@@ -10,7 +10,7 @@ end
 
 fileName = 'drumtest.midi'
 bpm = 120 # beats per minute of midi Song
-countBase = 1.0/4.0 # countbase in multiples/divisions of the quarternote (1/4 countbase is sixteenth notes, 4 notes per quarter note)
+countBase = 1.0/4.0 # countbase in multiples/divisions of the quarter note (1/4 countbase is sixteenth notes, 4 notes per quarter note)
 
 
 midiNotes = {'kick'=>36, 'snare'=>38, 'hihat'=>42}
@@ -19,11 +19,11 @@ stringParam ={'kick'=>{}, 'snare'=>{}, 'hihat'=>{}}
 
 # parameters for rhythm composition
 
-# quarternote beat on the hi-hat
-stringParam['hihat']['snippetL'] = [4] # snippet is 4 siixteenthnotes long (one quarternote)
+# quarter note beat on the hi-hat
+stringParam['hihat']['snippetL'] = [4] # snippet is 4 siixteenthnotes long (one quarter note)
 stringParam['hihat']['eventPos'] = [[0]] # hi-hat hit is on the first sixteenth note (the beat)
 stringParam['hihat']['idx'] = [0] # rhythm is made up out of one snippet
-stringParam['hihat']['nRep'] = [8] # repeat snippet 30 times for 30 quarternotes
+stringParam['hihat']['nRep'] = [8] # repeat snippet 30 times for 30 quarter notes
 stringParam['hihat']['rhythmRep'] = 1 # repeat total rhythm once for 8 beat bar
 
 
