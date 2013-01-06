@@ -17,8 +17,8 @@ Basics
 one for silence (default '-') and one for an event or hit (default '#'). An example:
 '#---#---#---#---', is read as one (drum) hit every three silences. 
 
-**2. rhythm snippets** are the building blocks of a rhythm string. With the
-StringCompiler Class these snippets can be created and compiled into a rhythm string.
+**2. rhythm snippets** are the building blocks of a rhythm string. The
+StringCompiler Class allows the creation of rhythm snippets and compiles them into a rhythm string.
 These snippets capture the repetitive aspects of most rhythms.
 
 **3. countBase** is the rhythmical length that is assigned to one symbol in a string.
@@ -30,6 +30,25 @@ Examples and Docs
 -----
 check out the examples provided and the documentation based on YARD. The examples are aimed at 
 creating single and multi instrument rhythms.
+
+in the next minimal example we have skipped the creation of the rhythm string.
+we write a predefined rhythm to midi
+
+**a minimal example**
+    require 'rhythmruby'
+    midiNote = 50 # midi note assigned to drum hits
+    bpm = 120 # beats per minute of midi file
+    fileName = 'testing.midi' # name of midi file
+    countBase = 1.0/4.0 # one symbol represents a sixteenth note (one fourth of a quarternote)
+    
+    rhythm = '#---#---' # two quarternote drum hits, on sixteenth note base
+    midiInfo = RhythmParser.parseRhythm(rhythm, countBase, midiNote)
+
+    midiWriter = MidiWriter.new(bpm) # midiWriter instance administrating one MIDI song
+    midiTrack = midiWriter.createTrack() # create track in the MIDI song
+    midiWriter.writeSeqToTrack(midiInfo, midiTrack) # write the parsed rhythm to a MIDI track
+    midiWriter.writeToFile(fileName) # write MIDI song to file
+
 
 Classes
 -------
