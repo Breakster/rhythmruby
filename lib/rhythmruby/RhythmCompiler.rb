@@ -73,6 +73,6 @@ class RhythmCompiler
       rhythmString += snippets[snippetID]*repeats 
     end
     
-    return rhythmString*totalRepeat # return the rhythm string repeated n times ready for parsing
+    return rhythmString*totalRepeat # return the rhythm string repeated totalRepeat times, ready for parsing
   end
 end
