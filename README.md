@@ -2,7 +2,7 @@ RhythmRuby: Midi rhythms through String manipulation
 ====================================================
 
 **Author**:         Luuk van der Velden, (Amsterdam, 2013)                                                                         
-**Website**:                                                                                                                      
+**Website**:       http://rubygems.org/gems/rhythmruby                                                                                                               
 **Git**:            https://github.com/Lvelden/rhythmruby.git                                                                        
 
 Synopsis

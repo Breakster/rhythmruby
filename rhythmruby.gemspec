@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.version       = Rhythmruby::VERSION
   gem.authors       = ["Luuk van der Velden"]
   gem.email         = ["l.j.j.vandervelden@gmail.com"]
-  gem.description   = %q{allows creation, parsing and writing to MIDI of symbolic rhythm Strings, see https://github.com/Lvelden/rhythmruby, for detailed README}
+  gem.description   = %q{represent rhythms as symbolic Strings and write them to MIDI}
   gem.summary       = %q{represent rhythms as symbolic Strings and write them to MIDI}
   gem.homepage      = "https://github.com/Lvelden/rhythmruby"
 
