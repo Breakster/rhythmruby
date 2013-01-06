@@ -1,7 +1,10 @@
 RhythmRuby: Midi rhythms through string manipulation 
 ====================================================
 
-**Author**: Luuk van der Velden, (Amsterdam, 2013)
+**Author**:         Luuk van der Velden, (Amsterdam, 2013)
+**Website**:
+**Git**:
+
 
 Synopsis
 --------
@@ -66,7 +69,7 @@ manipulation of rhythm snippets to create rhythm patterns. These can then be
 written to a midi file, possibly consisting of several tracks (f.i. hihat, snare, kick)
 
 With RhythmRuby you can capture polyrhythmics at their essence by compiling rhythms out of
-rhythm snippets and write them to midi drum tracks for further use in DAW's such as (cubase, logic, etc.)
+rhythm snippets and create midi drum tracks for further use in DAW's such as (cubase, logic, etc.)
 
 RhythmRuby was made to create drum rhythms for my band Hologram Earth (www.hologramearth.nl)
 
