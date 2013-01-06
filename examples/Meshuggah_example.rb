@@ -8,16 +8,25 @@ elsif versionInfo[1]<=8
   require "rhythmruby"
 end
 
-fileName = 'drumtest.midi'
-bpm = 120 # beats per minute of midi Song
+# In this example we recreate the initial drum pattern of the song:
+#'Perpetual Black Second' by Meshuggah on the album: Nothing (2002)
+# hi-hat and snare are quite straightforward, but we will use
+# RhythmRuby to capture the polyrithmics in the kick pattern
+
+fileName = 'Meshuggah.midi'
+bpm = 140 # beats per minute of midi Song
 countBase = 1.0/4.0 # countbase in multiples/divisions of the quarternote (1/4 countbase is sixteenth notes, 4 notes per quarter note)
 
+# define midiNotes for the midi percussion tracks,
+# these default notes work with the Hydrogen sampler
 
 midiNotes = {'kick'=>36, 'snare'=>38, 'hihat'=>42}
+
+# empty hash to store rhythm parameters
 stringParam ={'kick'=>{}, 'snare'=>{}, 'hihat'=>{}}
 
 
-# parameters for rhythm composition
+# create rhythm by specifying snippets and snippet patterns
 
 # parameters for basic quarternote beat on the hihat
 stringParam['hihat']['snippetL'] = [4] # snippet has length of 4 sixteenth notes (see countBase)

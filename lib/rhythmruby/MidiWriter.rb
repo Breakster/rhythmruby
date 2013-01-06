@@ -1,13 +1,13 @@
 # ruby version testing
 versionInfo = RUBY_VERSION.split('.').map{|num| num.to_i}
 
+# MIDI interface was build on midilib, by Jim Menard, https://github.com/jimm/midilib
 if versionInfo[1]==9
   require "midilib"
 elsif versionInfo[1]<=8
   require "rubygems" 
   require "midilib"  
 end
-
 
 # writes sequences of noteData (from a RhythmParser class) to midi tracks
 # a 'MidiWriter' represents one midi Song, which can be written to one file,
