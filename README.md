@@ -26,9 +26,15 @@ It is measured in quartenote lengths (relative to bpm), thus countBase: 1.0, mea
 
 **installation:** gem install rhythmruby
 
+Classes
+-------
+The **RhythmCompiler** (class) generates rhythm snippets and combines these into rhythm strings.
+These can be parsed to MIDI ready data by the **RhythmParser** (class).
+The parsed output can be written to a MIDI file by the **MidiWriter** (class instance). 
+
 Examples and Docs
 -----
-check out the examples provided and the documentation based on YARD. The examples are aimed at 
+Check out the examples provided and the documentation based on YARD. The examples are aimed at 
 creating single and multi instrument rhythms.
 
 In the next minimal example we have skipped the creation of the rhythm string.
@@ -51,13 +57,6 @@ A predefined rhythm is written to midi.
     midiTrack = midiWriter.createTrack() # create track in the MIDI song
     midiWriter.writeSeqToTrack(midiInfo, midiTrack) # write the parsed rhythm to a MIDI track
     midiWriter.writeToFile(fileName) # write MIDI song to file
-
-
-Classes
--------
-The **RhythmCompiler** (class) generates rhythm snippets and combines these into rhythm strings.
-These can be parsed to MIDI ready data by the **RhythmParser** (class).
-The parsed output can be written to a MIDI file by the **MidiWriter** (class instance). 
 
 Rational
 --------
