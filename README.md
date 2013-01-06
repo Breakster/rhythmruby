@@ -1,9 +1,9 @@
 RhythmRuby: Midi rhythms through string manipulation 
 ====================================================
 
-**Author**:         Luuk van der Velden, (Amsterdam, 2013)                                                                          
-**Website**:                                                                                                                       
-**Git**:            https://github.com/Lvelden/rhythmruby.git                                                                        
+    **Author**:         Luuk van der Velden, (Amsterdam, 2013)                                                                     
+    **Website**:                                                                                                                  
+    **Git**:            https://github.com/Lvelden/rhythmruby.git                                                                    
 
 Synopsis
 --------
