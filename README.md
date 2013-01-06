@@ -37,14 +37,14 @@ The parsed output can be written to a MIDI file by the **MidiWriter** (class ins
 Examples and Docs
 -----
 Check out the examples provided and the documentation based on YARD. The examples are aimed at 
-creating single and multi instrument rhythms.                                                                      
-**Meshuggah_example.rb**, explains the compilation of the
+creating single and multi instrument rhythms. **Meshuggah_example.rb**, explains the compilation of the
 intro rhythm of 'Perpetual Black Second' by Meshuggah (Nothing, 2002).
 
-In the minimal example below we have skipped the creation of the rhythm string. 
-A predefined rhythm is written to midi.
 
 **minimal example**
+
+In the example below we have skipped the creation of the rhythm string. 
+A predefined rhythm is written to midi.
 
     require 'rhythmruby'
     
