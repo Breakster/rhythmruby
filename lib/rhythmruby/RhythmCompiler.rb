@@ -47,27 +47,32 @@ class RhythmCompiler
      return snippets # return the array with the snippets
   end
   
-  
   # creates a rhythm string from rhythm snippets
   # @param [Array<String>] snippets array of rhythm snippets (from 'createSnippets)
   # @param [Array<Fixnum>] snippetIDx indexes, defining sequential order of snippets
-  # @param [Array<Fixnum>] nRepeats defining how often snippets are repeated...
-  #   if nil, all snippets are repeated once, if nRepeats.length==1, all snippets are repeated the same amount
-  #   otherwise nRepeats should be the same length as snippetIdx and define repetition per snippet
-  def self.createRhythm(snippets, snippetIDx, nRepeats)
-    if nRepeats == nil # test whether nRepeats is defined, if not all snippets are repeated once
-      nRepeats = [1]*snippetIDx.length # make nRepeats and snippetIDx the same length for iteration
+  # @param [Array<Fixnum>] snippetRep defining how often snippets are repeated...
+  #   if nil, all snippets are repeated once, if snippetRep.length==1, all snippets are repeated the same amount
+  #   otherwise snippetRep should be the same length as snippetIdx and define repetition per snippet
+  # @param [Fixnum] totalRepeat, number of times the total rhythm is repeated
+  # @return [String] rhythmString, symbolic rhythm string
+  def self.createRhythm(snippets, snippetIDx, snippetRep, totalRepeat)
+    if snippetRep == nil # test whether snippetRep is defined, if not all snippets are repeated once
+      snippetRep = [1]*snippetIDx.length # make snippetRep and snippetIDx the same length for iteration
     end 
+    if totalRepeat == nil # if undefined set repeats equal to 1
+      totalRepeat = 1
+    end
+    
     
     rhythmString = "" # empty string where all the snippets will be added to
     
     # iterate over combinations of snippetID and repeats
-    snippetIDx.zip(nRepeats).each do
+    snippetIDx.zip(snippetRep).each do
       |snippetID, repeats|
       # add the snippet with snippetID, repeat times, to the rhythm string 
       rhythmString += snippets[snippetID]*repeats 
     end
     
-    return rhythmString # return the rhythm string ready for parsing
+    return rhythmString*totalRepeat # return the rhythm string repeated n times ready for parsing
   end
 end

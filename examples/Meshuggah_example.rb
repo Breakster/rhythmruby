@@ -28,24 +28,29 @@ stringParam ={'kick'=>{}, 'snare'=>{}, 'hihat'=>{}}
 
 # create rhythm by specifying snippets and snippet patterns
 
-# parameters for basic quarternote beat on the hihat
+# basic quarternote beat on the hihat
 stringParam['hihat']['snippetL'] = [4] # snippet has length of 4 sixteenth notes (see countBase)
 stringParam['hihat']['eventPos'] = [[0]] # event/hit happens at position 0
 stringParam['hihat']['idx'] = [0] # only snippet '0' is repeated
-stringParam['hihat']['nRep'] = nil
-stringParam['hihat']['rhythmRep'] = 2*60/4
+stringParam['hihat']['nRep'] = [32]
+stringParam['hihat']['rhythmRep'] = 1
 
-stringParam['snare']['snippetL'] = [4,5,4]
-stringParam['snare']['eventPos'] = [[],[0],[0]]
-stringParam['snare']['idx'] = [0,1,0,1,0,1,0,1,2]
-stringParam['snare']['nRep'] = nil
-stringParam['snare']['rhythmRep'] = 2*60/(40)
+# snare pattern of four quarternote, snare on third note
+stringParam['snare']['snippetL'] = [4,4] # tow snippets of length 4 sixteenth notes
+stringParam['snare']['eventPos'] = [[], [0]] #. one snippet with hit on first sixteenth note and one empty snippet
+stringParam['snare']['idx'] = [0,0,1,0] # pattern of snippets (empty, empty, hit, empty)
+stringParam['snare']['nRep'] = nil # repeat snippets once
+stringParam['snare']['rhythmRep'] = 8 # repeat complete rhythm 10 times
 
-stringParam['kick']['snippetL'] = [5]
-stringParam['kick']['eventPos'] = [[0,2]]
-stringParam['kick']['idx'] = [0]
-stringParam['kick']['nRep'] = [1]
-stringParam['kick']['rhythmRep'] = 2*60/5
+
+# interesting kick pattern of 14 sixteenth notes long, it shifts respective to the hi-hat 
+stringParam['kick']['snippetL'] = [14, 2] # main pattern and 2 note filler at end of sequence
+
+# the main 14 note snippet looks like this: #--#--#-##-#--
+stringParam['kick']['eventPos'] = [[0, 3, 6, 8, 9, 11],[0]] # positions at which hits/events occur
+stringParam['kick']['idx'] = [0,1] # sequential order of snippets
+stringParam['kick']['nRep'] = [9,1] # repeat main snippet 9 times, then play filler pattern once
+stringParam['kick']['rhythmRep'] = 1 # repeat total rhythm once
 
 # for each instrument
 # create rhythm snippet strings and combine them in a rhythm string
@@ -54,7 +59,7 @@ stringParam.each_key do
   |instr|
   snippets = RhythmCompiler.createSnippets(stringParam[instr]['snippetL'],stringParam[instr]['eventPos'])
   # compile rhythm pattern/string
-  rhythms[instr] = RhythmCompiler.createRhythm(snippets, stringParam[instr]['idx'], stringParam[instr]['nRep'])*stringParam[instr]['rhythmRep']
+  rhythms[instr] = RhythmCompiler.createRhythm(snippets, stringParam[instr]['idx'], stringParam[instr]['nRep'], stringParam[instr]['rhythmRep'])
 
 end
 

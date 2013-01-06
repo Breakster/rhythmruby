@@ -21,8 +21,8 @@ eventPositions = [[0]] # positions per snippet, where events happen (zero-based)
 
 # pattern creation parameters
 snippetIdx = [0] # indexes of snippets to be added sequentially to the rhythm string
-nRepeats = [10] # number of repeats per snippet, if undefined (nil) all snippets are repeated once 
-
+snippetRep = [10] # number of repeats per snippet, if undefined (nil) all snippets are repeated once 
+totalRepeat = 1 # repeat total rhythm once
 
 # create rhythm snippet strings
 snippets = RhythmCompiler.createSnippets(snippetLengths, eventPositions)
@@ -30,7 +30,7 @@ snippets = RhythmCompiler.createSnippets(snippetLengths, eventPositions)
 puts 'snippets', snippets
 
 # compile rhythm pattern/string
-rhythm = RhythmCompiler.createRhythm(snippets, snippetIdx, nRepeats)
+rhythm = RhythmCompiler.createRhythm(snippets, snippetIdx, snippetRep, totalRepeat)
 
 # print out the compiled rhythm
 puts 'rhythm', rhythm

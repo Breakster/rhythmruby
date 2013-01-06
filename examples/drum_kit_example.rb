@@ -48,7 +48,7 @@ stringParam.each_key do
   |instr|
   snippets = RhythmCompiler.createSnippets(stringParam[instr]['snippetL'],stringParam[instr]['eventPos'])
   # compile rhythm pattern/string
-  rhythms[instr] = RhythmCompiler.createRhythm(snippets, stringParam[instr]['idx'], stringParam[instr]['nRep'])*stringParam[instr]['rhythmRep']
+  rhythms[instr] = RhythmCompiler.createRhythm(snippets, stringParam[instr]['idx'], stringParam[instr]['nRep'], stringParam[instr]['rhythmRep'])
 
 end
 
