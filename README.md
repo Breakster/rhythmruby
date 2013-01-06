@@ -57,7 +57,7 @@ A predefined rhythm is written to midi.
         
     rhythm = '#---#---' # two quarter note drum hits, on sixteenth note base
     
-    # parse the rhythm string to get MIDI ready information, array of [midiNote, noteLength] arrays
+    # parse the rhythm string to MIDI ready information (array of [midiNote, noteLength] sub-arrays)
     midiInfo = RhythmParser.parseRhythm(rhythm, countBase, midiNote)
     
     midiWriter = MidiWriter.new(bpm) # midiWriter instance administrating one MIDI song
