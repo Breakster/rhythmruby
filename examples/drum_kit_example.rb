@@ -54,9 +54,9 @@ end
 
 # print out the compiled rhythm
 puts 'rhythm'
-rhythms.each_key{ |instr|
+for instr in ['hihat', 'snare', 'kick']
   puts rhythms[instr]
-}
+end
 
 
 # create the midiWriter instance, to write the midi info to a file

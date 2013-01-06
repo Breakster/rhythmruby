@@ -10,7 +10,7 @@ Synopsis
 --------
 
 RhythmRuby enables the creation of midi rhythms, through string manipulation. 
-It provides methods for rhythm/string creation, parsing and writing them to midi tracks.
+It provides methods for rhythm/string creation, parsing and writing to midi files.
 Ruby and MIDI based rhythm delight!
 
 Basics
