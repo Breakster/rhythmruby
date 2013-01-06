@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Rhythmruby::VERSION
   gem.authors       = ["Luuk van der Velden"]
   gem.email         = ["l.j.j.vandervelden@gmail.com"]
-  gem.description   = %q{create midi rhythm files, using a binary symbol String abstraction as the interface}
-  gem.summary       = %q{allows manipulation, parsing and writing to midi of binary rhythm strings, this rhythm abstraction was build on top of the midilib gem by Jim Menard, thanks Jim!}
+  gem.description   = %q{allows creation, parsing and writing to MIDI of symbolic rhythm Strings, see https://github.com/Lvelden/rhythmruby, for detailed README}
+  gem.summary       = %q{represent rhythms as symbolic Strings and write them to MIDI}
   gem.homepage      = "https://github.com/Lvelden/rhythmruby"
 
   gem.files         = `git ls-files`.split($/)
