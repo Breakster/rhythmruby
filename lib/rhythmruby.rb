@@ -1,4 +1,4 @@
-# main file to load seperate class files
+# main file to load separate class files
 
 require "rhythmruby/RhythmParser"
 require "rhythmruby/RhythmCompiler"
