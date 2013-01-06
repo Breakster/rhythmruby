@@ -15,6 +15,8 @@ Ruby and MIDI based rhythm delight!
 Basics
 ------
 
+**installation:** gem install rhythmruby
+
 **1. rhythm string** is a string consisting of two symbols,
 one for silence (default '-') and one for an event or hit (default '#'). An example:
 '#---#---#---#---', is read as one (drum) hit every three silences. 
@@ -25,8 +27,6 @@ These snippets capture the repetitive aspects of most rhythms.
 
 **3. countBase** is the rhythmical length that is assigned to one symbol in a string.
 It is measured in quartenote lengths (relative to bpm), thus countBase: 1.0, means one quarternote per symbol. 
-
-**installation:** gem install rhythmruby
 
 Classes
 -------
