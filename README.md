@@ -1,4 +1,4 @@
-RhythmRuby: Midi rhythms through string manipulation 
+RhythmRuby: Midi rhythms through String manipulation 
 ====================================================
 
 **Author**:         Luuk van der Velden, (Amsterdam, 2013)                                                                         
