@@ -4,6 +4,7 @@ RhythmRuby: Midi rhythms through String manipulation
 **Author**:         Luuk van der Velden, (Amsterdam, 2013)                                                                           
 **Website**:       http://rubygems.org/gems/rhythmruby                                                                               
 **Git**:            https://github.com/Lvelden/rhythmruby.git                                                                        
+**Docs**:           http://rubydoc.info/gems/rhythmruby/0.1.1/frames                                                                 
 **Dependency**:    midilib by Jim Menard                                                                                            
 
 Synopsis
@@ -27,7 +28,7 @@ StringCompiler Class allows the creation of rhythm snippets and compiles them in
 These snippets capture the repetitive aspects of most rhythms.
 
 **3. countBase** is the rhythmical length that is assigned to one symbol in a string.
-It is measured in quartenote lengths (relative to bpm), thus countBase: 1.0, means one quarter note per symbol. 
+It is measured in quarter note lengths (relative to bpm), thus countBase: 1.0, means one quarter note per symbol. 
 
 Classes
 -------
@@ -38,7 +39,7 @@ The parsed output can be written to a MIDI file by the **MidiWriter** (class ins
 Examples and Docs
 -----------------
 
-Check out the examples provided and the documentation based on YARD. The examples are aimed at 
+Check out the examples provided and the documentation. The examples are aimed at 
 creating single and multi instrument rhythms. For instance **Meshuggah_example.rb** explains the creation of the
 intro rhythm of 'Perpetual Black Second' by Meshuggah (Nothing, 2002), using ruby scripting.
 
