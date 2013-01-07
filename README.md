@@ -75,7 +75,7 @@ pmidi. pmidi can send the MIDI events to any ALSA channel f.i. the MIDI-in of th
 is a nice drum sampler and sequencer. In this way you can listen to the rhythms you create without leaving your
 IDE or editor.
 
-Rational
+Rationale
 --------
 
 RhythmRuby's strength lies in the rhythm string abstraction. It allows easy computer
