@@ -75,4 +75,19 @@ class RhythmCompiler
     
     return rhythmString*totalRepeat # return the rhythm string repeated totalRepeat times, ready for parsing
   end
+  
+  # logical exlusion of two rhythms, removes events from slave simultaneous withn an event in master
+  # @param [String] masterRhythm rhythm to intersect with
+  # @param [String] slaveRhythm rhythm to intersect
+  # @return [String] intersected slaveRhythm
+  def self.Exclusion(masterRhythm, slaveRhythm)
+    masterRhythm.split("").zip(slaveRhythm.split("")).each_with_index do
+      |symbols, index|
+      master,slave = symbols
+      if master == @@eventMarker && slave == @@eventMarker # if both have an event
+        slaveRhythm[index] = @@silenceMarker # replace event with silence
+      end
+    end
+    return slaveRhythm
+  end  
 end
