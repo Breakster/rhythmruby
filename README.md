@@ -92,3 +92,8 @@ Acknowledgment
 --------------
 thanks Jim Menard for **midilib**, a pure ruby MIDI library.
 https://github.com/jimm/midilib
+
+Versions
+--------
+0.1.2           added LogicalRhythms class
+0.1.0/0.1.1     initial release

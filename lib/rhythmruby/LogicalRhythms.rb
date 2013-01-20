@@ -18,7 +18,7 @@ class LogicalRhythms
     return slaveRhythm
   end  
 
-  # logical XOR of two rhythms, true except both true
+  # logical XOR of two rhythms, true except both true or both false
   # @param [String] masterRhythm rhythm to intersect with
   # @param [String] slaveRhythm rhythm to intersect
   # @return [String] intersected slaveRhythm
