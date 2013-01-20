@@ -90,4 +90,25 @@ class RhythmCompiler
     end
     return slaveRhythm
   end  
+  
+  # logical or of two rhythms, thus event in result rhythm, when at least one
+  # of two original rhythms has an event
+  # @param [String] rhythmA, one of the rhythms to or
+  # @param [String] rhythmB, one of the rhythms to or
+  # @return [String] resultRhyhtm, result of logical or 
+  def self.Logical_Or(rhythmA, rhyhtmB)
+    resultRhythm = ""
+        
+    rhythmA.split("").zip(rhythmB.split("")).each do
+      |symA, symB|
+      if symA == @@eventMarker or symB == @@eventMarker
+        resultRhythm += @@eventMaker
+      else
+        resultRhythm += @@silenceMarker
+      end
+    end
+    
+    return resultRhythm    
+  end
+  
 end
