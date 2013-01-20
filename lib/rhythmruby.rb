@@ -3,3 +3,4 @@
 require "rhythmruby/RhythmParser"
 require "rhythmruby/RhythmCompiler"
 require "rhythmruby/MidiWriter"  
+require "rhythmruby/LogicalRhythms"
