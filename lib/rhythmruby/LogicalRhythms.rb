@@ -22,7 +22,7 @@ class LogicalRhythms
   # @param [String] masterRhythm rhythm to intersect with
   # @param [String] slaveRhythm rhythm to intersect
   # @return [String] intersected slaveRhythm
-  def self.Xor(rhythmA, rhythmB)
+  def self.XOR(rhythmA, rhythmB)
     resultRhythm = ""
     rhythmA.split("").zip(rhythmB.split("")).each do
       |symA, symB|
@@ -34,7 +34,7 @@ class LogicalRhythms
         resultRhythm += @@silenceMarker
       end
     end
-    return slaveRhythm
+    return resultRhythm
   end  
   
   # logical OR of two rhythms, thus event in result rhythm, when at least one
@@ -42,13 +42,13 @@ class LogicalRhythms
   # @param [String] rhythmA, one of the rhythms to or
   # @param [String] rhythmB, one of the rhythms to or
   # @return [String] resultRhyhtm, result of logical or 
-  def self.Or(rhythmA, rhyhtmB)
+  def self.OR(rhythmA, rhythmB)
     resultRhythm = ""
         
     rhythmA.split("").zip(rhythmB.split("")).each do
       |symA, symB|
       if symA == @@eventMarker or symB == @@eventMarker
-        resultRhythm += @@eventMaker
+        resultRhythm += @@eventMarker
       else
         resultRhythm += @@silenceMarker
       end
@@ -60,11 +60,11 @@ class LogicalRhythms
   # @param [String] rhythmA, one of the rhythms to and
   # @param [String] rhythmB, one of the rhythms to and
   # @return [String] resultRhythm, result of logical and
-  def self.And(rhythmA, rhythmB)
+  def self.AND(rhythmA, rhythmB)
     resultRhythm = ""
     rhythmA.split("").zip(rhythmB.split("")).each do
       |symA, symB|
-      if symA == @@eventMarker and symb == @@eventMarker
+      if symA == @@eventMarker and symB == @@eventMarker
         resultRhythm += @@eventMarker
        else
          resultRhythm += @@silenceMarker       
