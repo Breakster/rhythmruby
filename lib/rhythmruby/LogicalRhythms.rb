@@ -7,7 +7,7 @@ class LogicalRhythms
   # @param [String] masterRhythm rhythm to intersect with
   # @param [String] slaveRhythm rhythm to intersect
   # @return [String] intersected slaveRhythm
-  def self.Exlusion(masterRhythm, slaveRhythm)
+  def self.Exclusion(masterRhythm, slaveRhythm)
     masterRhythm.split("").zip(slaveRhythm.split("")).each_with_index do
       |symbols, index|
       master,slave = symbols
