@@ -4,7 +4,7 @@ RhythmRuby: Midi rhythms through String manipulation
 **Author**:         Luuk van der Velden, (Amsterdam, 2013)                                                                           
 **Website**:       http://rubygems.org/gems/rhythmruby                                                                               
 **Git**:            https://github.com/Lvelden/rhythmruby.git                                                                        
-**Docs**:           http://rubydoc.info/gems/rhythmruby/0.1.1/frames                                                                 
+**Docs**:           http://rubydoc.info/gems/rhythmruby/0.1.2/frames                                                                 
 **Dependency**:    midilib by Jim Menard                                                                                            
 
 Synopsis
@@ -33,6 +33,7 @@ It is measured in quarter note lengths (relative to bpm), thus countBase: 1.0, m
 Classes
 -------
 The **RhythmCompiler** (class) generates rhythm snippets and combines these into rhythm strings.
+**LogicalRhythms** (class) allows logical interaction between different rhythm strings.
 These can be parsed to MIDI ready data by the **RhythmParser** (class).
 The parsed output can be written to a MIDI file by the **MidiWriter** (class instance). 
 
