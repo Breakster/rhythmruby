@@ -84,8 +84,8 @@ rhythms.each_key do
   
   # write the midi info/sequence to the midiTrack
   midiWriter.writeSeqToTrack(midiSequence, midiTrack)
-
 end
 
+midiWriter.mergeTracks
 # write the midiSong to a file
 midiWriter.writeToFile(fileName)

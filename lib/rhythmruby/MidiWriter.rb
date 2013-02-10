@@ -47,8 +47,11 @@ class MidiWriter
   # @param [Float] noteLength length of the midiEvent, in multiples of the quarternote
   # @param [MIDI::Track] midiTrack where the event is written to
   def writeNote(midiNote, noteLength, midiTrack)
-      midiTrack.events << MIDI::NoteOnEvent.new(0, midiNote, 127, 0) 
-      midiTrack.events << MIDI::NoteOffEvent.new(0, midiNote, 127, \
+      # if the velocity is 0, the note is not played.
+      # use this for an initial silent note.
+      velocity = (midiNote == 0) ? 0 : 127
+      midiTrack.events << MIDI::NoteOnEvent.new(0, midiNote, velocity, 0) 
+      midiTrack.events << MIDI::NoteOffEvent.new(0, midiNote, velocity, \
       @song.length_to_delta(noteLength))
   end
 
@@ -56,5 +59,13 @@ class MidiWriter
   # @param [String] fileName where the midiSong is written to, can be a path 
   def writeToFile(fileName)
     open(fileName, 'w') {|f| @song.write(f) }
+  end
+
+  def mergeTracks
+    masterTrack = MIDI::Track.new(@song)
+    @song.tracks.each do |track|
+      masterTrack.merge(track.events)
+    end
+    @song.tracks = [masterTrack]
   end
 end

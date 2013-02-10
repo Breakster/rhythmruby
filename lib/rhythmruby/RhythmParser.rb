@@ -1,7 +1,7 @@
 
 # Parser (use as class) of the rhythm strings, consisting event and silence symbols
 class RhythmParser
-  @@silenceNote = 1 # pitch of a note played at during initial silence in a sequence
+  @@silenceNote = 0 # pitch of a note played during initial silence in a sequence
   @@silenceMark = '-' # symbol identified as a silence
   @@eventMark = '#' # symbol identified as an event
   @@eventNote = 50 # (unused default) midi note of an event
